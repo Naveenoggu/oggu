@@ -1,0 +1,171 @@
+
+1.source /tool/glsetc/pdsource.sh
+
+2. icc2_shell
+
+3. create_lib test_1_lib -ref_libs { /workarea/crashcourse/ccdft1/ccdft1taranth/LEON/ndm/saed32hvt_c.ndm /workarea/crashcourse/ccdft1/ccdft1taranth/LEON/ndm/saed32lvt_c.ndm /workarea/crashcourse/ccdft1/ccdft1taranth/LEON/ndm/saed32pll_5v.ndm /workarea/crashcourse/ccdft1/ccdft1taranth/LEON/ndm/saed32rvt_c.ndm /workarea/crashcourse/ccdft1/ccdft1taranth/LEON/ndm/saed32sram_c.ndm } -technology /workarea/crashcourse/ccdft1/ccdft1taranth/icc2/dtmf_project/inputs/saed32nm_1p9m_mw.tf
+
+4. read_verilog /workarea/crashcourse/ccdft1/ccdft1taranth/LEON/inputs/leon.v
+
+5. read_sdc /workarea/crashcourse/ccdft1/ccdft1taranth/icc2/LEON/inputs/leon.sdc
+
+6.define_user_attribute -type string -name routing_direction -classes routing_rule
+
+7.set_attribute -objects [get_layers {M1 M3 M5 M7 M9}] -name routing_direction -value horizontal
+
+8. set_attribute -objects [get_layers {M2 M4 M6 M8 MRDL}] -name routing_direction -value vertical
+
+        # add TLU+ files
+
+9.read_parasitic_tech -tlup /workarea/pdclass/pdtrainer/pdtresafi/icc2_design/icc2/dtmf_project/inputs/saed32nm_1p9m_Cmax.tluplus  -layermap /workarea/pdclass/pdtrainer/pdtresafi/icc2_design/icc2/dtmf_project/inputs/saed32nm_tf_itf_tluplus.map -name worst_para
+
+10 .read_parasitic_tech  -tlup /workarea/pdclass/pdtrainer/pdtresafi/icc2_design/icc2/dtmf_project/inputs/saed32nm_1p9m_Cmin.tluplus  -layermap /workarea/pdclass/pdtrainer/pdtresafi/icc2_design/icc2/dtmf_project/inputs/saed32nm_tf_itf_tluplus.map -name best_para
+
+11. save_block -as Import_design_test_LAB1
+
+
+12. save_lib 
+
+13.close_block 
+
+14. close_lib
+
+
+floor plan****************************************************************************************
+
+     1  open_lib /workarea/pdclass/pdtrainer/pdtresafi/LEON_22_05_2020_LAB_Import_design
+     2  open_lib /workarea/pdclass/pdtrainer/pdtresafi/LEON_22_05_2020_LAB_Import_design/test_1_lib/
+     3  list_blocks
+     4  open_block Import_design_test_LAB1
+     5  start_gui
+     6  link_block
+     7  initialize_floorplan -side_ratio {2 2} -core_offset {10}
+     8  set_block_pin_constraints -allowed_layers { M3 M4} -self
+     9  place_pins -self
+    10  set_attribute [get_ports *] physical_status fixed
+    11  move_objects -rotate_by FLIPY -group
+    12  move_objects -rotate_by FLIPX -group
+    13  move_objects -rotate_by FLIPX -group
+    14  align_objects -side left
+    15  create_keepout_margin -outer {2 2 2 2} [get_flat_cells -filter "is_hard_macro"]
+    16  set_fixed_objects [get_selection]
+    17  gui_remove_all_rulers -window [gui_get_current_window -types Layout -mru];  gui_remove_all_rulers -window global
+    18  set_fixed_objects [get_selection] -unfix
+    19  set_fixed_objects [get_selection]
+
+power plan*****************************************************************
+
+     create_net -ground VSS
+     create_net -power VDD
+    create_port -direction inout VDD
+
+   create_port -direction inout VSS
+    
+    39  change_sel [get_ports VDD]
+    40  connect_pg_net -net VDD [get_ports VDD]
+    41  connect_pg_net -net VSS [get_ports VSS]
+    4
+    43  connect_pg_net -net VDD [get_pins */VDD]
+    44  connect_pg_net -net VSS [get_pins */VSS]
+    
+    49  change_sel [get_nets VDD]
+    
+    51  set_attribute [get_lib_cells */TIE*] dont_touch false
+    52  set_lib_cell_purpose -include optimization [get_lib_cells */TIE*]
+  
+    create_pg_strap -layer M8 -direction vertical -width 0.5 -net VDD -start 14 -stop 640 -pitch 8
+	create_pg_strap -layer M8 -direction vertical -width 0.5 -net VSS -start 15.22 -stop 641 -pitch 8
+	
+	create_pg_strap -layer M9 -direction horizontal -width 0.5 -net VDD -start 11.45 -stop 640 -pitch 8
+	create_pg_strap -layer M9 -direction horizontal -width 0.5 -net VSS -start 13.90 -stop 641 -pitch 8
+    63  create_pg_macro_conn_pattern preroute_pattern -pin_conn_type scattered_pin -layers {M9 M8}
+    64  set_pg_strategy preroute_pattern_s -macros [get_cells -physical_context -filter design_type==macro] -pattern {{name:preroute_pattern}{nets:{VSS VDD}}}
+    65  compile_pg -strategies preroute_pattern_s
+    66  create_pg_std_cell_conn_pattern std_pattern -layers {M1} -check_std_cell_drc true -mark_as_follow_pin false
+    67  set_pg_strategy rail_strat -core -pattern {{name:std_pattern}{nets:VDD VSS}}
+    68  compile_pg -strategies rail_strat
+    69  create_pg_vias -nets {VDD VSS} -from_layers M1 -to_layers M8 -drc no_check
+    70  check_pg_connectivity
+   
+    72  save_block -as pg_plan_test1
+    73  save_lib
+    
+    75  check_pg_missing_vias
+    76  report_power
+
+
+#placement*******************************************************************************************************
+    80  set_boundary_cell_rules -left_boundary_cell saed32rvt_c/SHFILL3_RVT -right_boundary_cell saed32rvt_c/SHFILL3_RVT
+    81  compile_targeted_boundary_cells -target_objects [get_voltage_areas]
+    82  create_tap_cells -lib_cell saed32rvt_c/SHFILL3_RVT -distance 30 -skip_fixed_cells
+    83  change_sel [get_cells *tap*]
+    84  check_legality -cells [get_cells bound*]
+    85  check_legality -cells [get_cells tap*]
+    86  add_buffer [get_nets -of [get_ports *]] [get_lib_cells */NBUFFX4_RVT]
+    87  
+    88  magnet_placement [get_ports *]
+    89  set_attribute [get_cells eco_cel*] physical_status fixed
+    
+    91  source /workarea/crashcourse/ccdft1/ccdft1taranth/icc2/dtmf_project/scripts/create_path_groups.tcl
+
+    92  check_design -checks pre_placement_stage
+    93  set_app_options  -name place.coarse.continue_on_missing_scandef -value true
+    94  create_placement -congestion
+    95  set_parasitic_parameters -early_spec best_para
+    96  set_parasitic_parameters -late_spec worst_para
+ 
+CTS************************************************************************
+
+
+ create_routing_rule  clk_rule -widths  {M6 0.112 M7 0.112 } -spacings  {M6 0.056 M7 0.056 }
+
+ check_clock_tree
+
+set_lib_cell_purpose -include cts "saed32rvt_c/NBUFFX4_RVT saed32rvt_c/NBUFFX8_RVT saed32rvt_c/NBUFFX16_RVT"
+
+set_app_options -name  cts.common.max_fanout -value 30
+
+set_clock_routing_rules -clocks [get_clocks {clk}] -net_type {internal} -rules clk_rule -min_routing_layer M2 -max_routing_layer M7
+
+set_clock_routing_rules -clocks [get_clocks {clk}] -net_type {root} -rules clk_rule -min_routing_layer M2 -max_routing_layer M7
+
+set_clock_tree_options -clocks [get_clocks {clk}] -target_latency 0.250 -target_skew 0.030
+
+clock_opt
+
+     4  check_clock_trees
+     
+     6  report_clocks -skew
+     7  report_clock_qor
+     8  report_timing -delay_type max
+     9  report_timing -delay_type min
+    10  report_constraint
+    
+    12  check_legality -verbose > cts_legality.rpt
+  
+    24  report_design > report_design_cts.rpt
+  
+    26  report_qor
+
+
+
+
+
+  check_design -checks pre_route_stage
+     7  check_routability
+     8  set_app_options -name route.detail.timing_driven -value true
+     9  set_app_options -name route.track.timing_driven -value true
+    10  set_app_options -name route.track.crosstalk_driven -value true
+    11  set_app_options -name route.global.timing_driven -value true
+    12  set_ignored_layers -max_routing_layer M7 -min_routing_layer M2
+    13  set_host_options -max_cores 40
+    14  set_app_options -name route.common.global_min_layer_mode -value allow_pin_connection
+    15  set_app_options -name route.common.global_max_layer_mode -value soft
+    16  set_app_options -name route.common.global_max_layer_mode -value soft
+    17  set_app_options -name time.si_enable_analysis -value true
+    18  set_app_options -name time.enable_si_timing_windows  -value true
+    19  set_app_options -name time.enable_ccs_rcv_cap -value true
+    20  route_global
+    21  route_track
+    22  route_detail
+    31  check_routes
