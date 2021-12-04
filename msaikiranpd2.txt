@@ -1,0 +1,27 @@
+VPN Info: Munagala saikiran	6300435885	Saikiranmunagala648@gmail.com
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| Configuring VPN Client Info. |
+````````````````````````````````
+Primary Server: vpn2.goldenlightsolutions.com
+username: msaikiranpd2
+password: WelCome2Pd21
+key shared password: rlMjOr0b
+port: 1196
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| Connecting to Server Via Putty. |
+```````````````````````````````````
+Server Info:
+GLS: 10.18.24.10
+username: msaikiranpd2
+password: WelCome2Pd21
+workarea:  /workarea/pdclass/pd2/msaikiranpd2/
+
+
+To change the password: use the commadn passwd at prompt. 
+
+
+NB: Don't save your data in home. save in given workarea path.
+
+Help file link: 
+https://drive.google.com/file/d/134QvuZhD5ncic-9-g3YDrI4MpggMYhnc/view?usp=sharing
