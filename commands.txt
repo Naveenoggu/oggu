@@ -1,5 +1,4 @@
-#This file will have all my executed command
-#requested to add new comments
+#This file will have all my executed commands
 1.source /tool/glsetc/pdsource.sh
 
 2. icc2_shell
