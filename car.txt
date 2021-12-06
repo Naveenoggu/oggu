@@ -1,0 +1,978 @@
+
+
+
+<body>
+<div class="bg-container">
+<h1 class="color-palette-heading">Color Palette</h1>
+<div class="color-palette-container">
+<div class="card-container">
+<h1 class="color-text">Red</h1>
+<p class="color-text">#f87171</p>
+</div>
+<div class="card-container card1">
+<h1 class="color-text">Orange</h1>
+<p class="color-text">#fb923c</p>
+</div>
+<div class="card-container card2">
+<h1 class="color-text">Amber</h1>
+<p class="color-text">#fbbf24</p>
+</div>
+<div class="card-container card3">
+<h1 class="color-text">Yellow</h1>
+<p class="color-text">#facc15</p>
+</div>
+<div class="card-container card4">
+<h1 class="color-text">Lime</h1>
+<p class="color-text">#a3e635</p>
+</div>
+<div class="card-container card5">
+<h1 class="color-text">Green</h1>
+<p class="color-text">#4ade80</p>
+</div>
+<div class="card-container card6">
+<h1 class="color-text">Emerald</h1>
+<p class="color-text">#34d399</p>
+</div>
+<div class="card-container card7">
+<h1 class="color-text">Cyan</h1>
+<p class="color-text">#22d3ee</p>
+</div>
+<div class="card-container card8">
+<h1 class="color-text">Light Blue</h1>
+<p class="color-text">#38bdf8</p>
+</div>
+<div class="card-container card9">
+<h1 class="color-text">Blue</h1>
+<p class="color-text">#60a5fa</p>
+</div>
+<div class="card-container card10">
+<h1 class="color-text">Indigo</h1>
+<p class="color-text">#818cf8</p>
+</div>
+<div class="card-container card11">
+<h1 class="color-text">Purple</h1>
+<p class="color-text">#c084fc</p>
+</div>
+<div class="card-container card12">
+<h1 class="color-text">Funcsla</h1>
+<p class="color-text">#e879f9</p>
+</div>
+<div class="card-container card13">
+<h1 class="color-text">Pink</h1>
+<p class="color-text">#f472b6</p>
+</div>
+<div class="card-container card14">
+<h1 class="color-text">Rose</h1>
+<p class="color-text">#fb7185</p>
+</div>
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+`css
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0px;
+}
+
+.bg-container {
+background-color: #ffffff;
+height: 100vh;
+background-size: cover;
+padding: 10px;
+}
+
+.color-palette-container {
+display: flex;
+flex-wrap: wrap;
+}
+.color-palette-heading {
+font-family: "Roboto";
+font-size: 25px;
+font-weight: 800;
+color: #011e3f;
+
+}
+.card-container {
+background-color: #f87171;
+height: 100px;
+width: 100px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 10px;
+margin-left: 10px;
+
+}
+.card1 {
+background-color: #fb923c;
+margin-top: 10px;
+}
+.card2 {
+background-color: #fbbf24;
+margin-top: 10px;
+margin-left: 10px;
+}
+
+.card3 {
+background-color: #facc15;
+margin-top: 10px;
+margin-left: 10px;
+}
+
+.card4 {
+background-color: #a3e635;
+margin-top: 10px;
+margin-left: 10px;
+}
+
+.card5 {
+background-color: #4ade80;
+margin-top: 10px;
+margin-left: 10px;
+}
+
+.card6 {
+background-color: #34d399;
+margin-top: 10px;
+margin-left: 10px;
+}
+
+.card7 {
+background-color: #22d3ee;
+margin-top: 10px;
+margin-left: 10px;
+}
+
+.card8 {
+background-color: #38bdf8;
+margin-top: 10px;
+margin-left: 10px;
+}
+
+.card9 {
+background-color: #60a5fa;
+margin-top: 10px;
+margin-left: 10px;
+}
+
+.card10 {
+background-color: #818cf8;
+margin-top: 10px;
+margin-left: 10px;
+}
+
+.card11 {
+background-color: #c084fc;
+margin-top: 10px;
+margin-left: 10px;
+}
+
+.card12 {
+background-color: #e879f9;
+margin-top: 10px;
+margin-left: 10px;
+}
+
+.card13 {
+background-color: #f472b6;
+margin-top: 10px;
+margin-left: 10px;
+}
+
+.card14 {
+background-color: #fb7185;
+margin-top: 10px;
+margin-left: 10px;
+}
+
+
+.color-text {
+font-family: "Roboto";
+font-size: 15px;
+font-weight: 600;
+color: #ffffff;
+}
+
+
+
+<body>
+<div class="bg-container">
+<div class="image-container"></div>
+<div class="content">
+<h1 class="heading">We have the best service</h1>
+<p class="description">
+Travelya was born in 2007 when two Hosts welcomed three
+guests to their San Francisco home and has since grown to 4 million Hosts
+who have welcomed over 800 million guest arrivals in almost every country across the globe.
+</p>
+<div class="options-text">
+<div class="card-container">
+<h1 class="Best-service-count">192</h1>
+<p class="Best-service-names">Countries</p>
+</div>
+<div class="card-container">
+<h1 class="Best-service-count">500</h1>
+<p class="Best-service-names">Hotels</p>
+</div>
+</div>
+<div class="options-text">
+<div class="card-container">
+<h1 class="Best-service-count">2986</h1>
+<p class="Best-service-names">Rooms</p>
+</div>
+<div class="card-container">
+<h1 class="Best-service-count">10500+</h1>
+<p class="Best-service-names">Employees</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+
+
+
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0px;
+}
+
+.bg-container {
+background-color: #ffffff;
+height: 100vh;
+margin-top: 10px;
+margin-left: 20px;
+margin-right: 20px;
+display: flex;
+flex-direction: column;
+
+}
+
+@media screen and (min-width:992px) {
+.bg-container {
+display: flex;
+flex-direction: row;
+
+
+}
+}
+
+.image-container {
+background-image: url("https://assets.ccbp.in/frontend/intermediate-rwd/houses-sm-bg.png");
+min-height: 50vh;
+min-width: 400px;
+background-size: cover;
+flex-grow: 1;
+flex-wrap: wrap;
+
+}
+
+@media screen and (min-width:992px) {
+.image-container {
+background-image: url("https://assets.ccbp.in/frontend/intermediate-rwd/house-lg-bg.png");
+flex-wrap: wrap;
+}
+}
+
+.content {
+min-width: 400px;
+flex-grow: 1;
+
+
+}
+
+@media screen and (min-width:992px) {
+.content {
+display: flex;
+flex-direction: column;
+order: 1;
+flex-wrap: wrap;
+}
+}
+
+.heading {
+font-family: "Roboto";
+font-size: 30px;
+font-weight: bold;
+color: #12022f;
+
+}
+
+@media screen and (min-width:992px) {
+.heading {
+font-size: 35px;
+padding-left: 15px;
+}
+}
+
+.description {
+font-family: "Roboto";
+font-size: 16px;
+color: #594d6d;
+}
+
+@media screen and (min-width:992px) {
+.description {
+font-size: 25px;
+padding-left: 15px;
+}
+}
+
+.options-text {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+
+.card-container {
+padding-top: 10px;
+margin-left: 20px;
+
+}
+
+.Best-service-count {
+font-family: "Roboto";
+font-size: 20px;
+font-weight: bold;
+color: #176fff;
+}
+
+@media screen and (min-width:992px) {
+.Best-service-count {
+font-size: 35px;
+}
+}
+
+.Best-service-names {
+font-family: "Roboto";
+font-size: 20px;
+color: #323f4b;
+}
+
+@media screen and (min-width:992px) {
+.Best-service-names {
+font-size: 35px;
+}
+
+
+
+
+
+
+<body>
+<div class="bg-container">
+<div class="color-container">
+<nav class="navbar">
+<div class="nav-container">
+<img src="https://assets.ccbp.in/frontend/intermediate-rwd/instagram-story-viewer-logo.png" class="nav-logo" />
+<h1 class="nav-text">Instagram</h1>
+</div>
+
+<ul class="list-items">
+<li class="list-text">Services</li>
+<li class="list-text">Pricing</li>
+<li class="list-text">Contacts</li>
+<li><img src="https://assets.ccbp.in/frontend/intermediate-rwd/search-icon-img.png" class="searchbar" />
+</li>
+</ul>
+<img src="https://assets.ccbp.in/frontend/intermediate-rwd/search-icon-img.png" class="searchbar1" />
+
+</nav>
+<div class="main-heading-container">
+<h1 class="Instagram-story-heading">Instagram Story Viewer and Downloader</h1>
+<p class="Instagram-story-description">
+Best Instagram story Viewer! You can watch Instagram stories
+anonymously and quickly without the need to log in.
+</p>
+</div>
+<div class="input-and-btn-container">
+<input type="text" class="input-text form-control">
+<button class="button">Search</button>
+</div>
+</div>
+
+<div class="content-container">
+<div class="card-container">
+<img src="https://assets.ccbp.in/frontend/intermediate-rwd/no-account-img.png" class="image" />
+<h1 class="image-text">No Need Instagram Account</h1>
+</div>
+<div class="card-container">
+<img src="https://assets.ccbp.in/frontend/intermediate-rwd/anonymous-img.png" class="image" />
+<h1 class="image-text">Anonymous</h1>
+</div>
+<div class="card-container">
+<img src="https://assets.ccbp.in/frontend/intermediate-rwd/download-img.png" class="image" />
+<h1 class="image-text">Download and Share</h1>
+</div>
+</div>
+</div>
+</body>
+
+
+
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0px;
+}
+
+.bg-container {
+display: flex;
+flex-direction: column;
+overflow-y: auto;
+}
+
+.color-container {
+background-image: linear-gradient(to right, #f54f5a, #f58529, #f64f59, #d267c4, #00ffff);
+background-size: cover;
+height: 50vh;
+
+}
+
+@media screen and (min-width:768px) {
+.color-container {
+background-image: linear-gradient(to bottom, #f54f5a, #f58529, #f64f59, #d267c4, #00ffff);
+height: 30vh;
+
+}
+}
+
+.navbar {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 10px;
+
+
+}
+
+.nav-container {
+display: flex;
+flex-direction: row;
+}
+
+.nav-logo {
+height: 40px;
+width: 40px;
+margin-right: 10px;
+margin-top: 25px;
+}
+
+.list-items {
+display: flex;
+list-style-type: none;
+}
+
+@media screen and (max-width:765px) {
+.list-items {
+display: none;
+}
+}
+
+
+.list-text {
+font-size: 10px;
+font-weight: 600;
+color: white;
+font-family: "Roboto";
+margin-left: 10px;
+margin-right: 10px;
+margin-top: 25px;
+}
+
+.nav-text {
+font-size: 20px;
+font-weight: 600;
+color: white;
+font-family: "Roboto";
+margin-top: 35px;
+
+}
+
+.searchbar {
+height: 40px;
+width: 40px;
+margin-top: 15px;
+margin-right: 10px;
+}
+
+.searchbar1 {
+height: 40px;
+width: 40px;
+margin-top: 15px;
+margin-right: 10px;
+}
+
+@media screen and (min-width:768px) {
+.searchbar1 {
+display: none;
+}
+}
+
+.main-heading-container {
+display: flex;
+flex-direction: column;
+}
+
+.Instagram-story-heading {
+font-family: "Cursive";
+font-style: italic;
+font-size: 25px;
+font-weight: bold;
+color: white;
+text-align: center;
+
+}
+
+.Instagram-story-description {
+font-family: "Roboto";
+font-size: 18px;
+color: white;
+text-align: center;
+}
+
+.content-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding-top: 20px;
+}
+
+.input-and-btn-container {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+@media screen and (max-width:767px) {
+.input-and-btn-container {
+display: none;
+}
+}
+
+.input-text {
+height: 30px;
+width: 200px;
+background-color: white;
+border-radius: 10px;
+border-width: 0px;
+}
+
+.button {
+background-color: #3b82f6;
+border-radius: 10px;
+height: 30px;
+width: 100px;
+color: white;
+border-width: 0px;
+margin-left: 10px;
+}
+
+.content-container {
+direction: flex;
+flex-direction: column;
+}
+
+@media screen and (min-width:768px) {
+.content-container {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+
+}
+}
+
+.card-container {
+display: flex;
+flex-direction: column;
+text-align: center;
+justify-content: center;
+}
+
+@media screen and (min-width:768px) {
+.card-container {
+margin-left: 15px;
+margin-right: 15px;
+
+}
+}
+
+
+.image {
+height: 80px;
+width: 80px;
+align-self: center;
+}
+
+.image-text {
+font-family: "Roboto";
+font-size: 20px;
+color: #0f172a;
+text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+let searchInputEl = document.getElementById("searchInput");
+let searchResultEl = document.getElementById("searchResult");
+let spinnerEl = document.getElementById("spinner");
+let errorMsgEl = document.getElementById("errorMsg");
+let popularBooksTitleEl = document.getElementById("popularBooksTitle");
+
+function popularBooksTitleCall() {
+    popularBooksTitleEl.textContent = "Popular Books";
+}
+
+function createAndAppendSearchResult(result) {
+    let {
+        title,
+        imageLink,
+        author
+    } = result;
+
+    let resultItemEl = document.createElement("div");
+    resultItemEl.classList.add("col-6");
+
+    let rowDivEl = ddocument.createElement("div");
+    rowDivEl.classList.add("row");
+    resultItemEl.appendChild(rowDivEl);
+
+    let bookDetailsContainerEl = document.createElement("div");
+    bookDetailsContainerEl.classList.add("p-3", "col-7");
+    rowDivEl.appendChild(bookDetailsContainerEl);
+
+    let imageEl = document.createElement("img");
+    imageEl.classList.add("mt-auto", "mb-auto");
+    imageEl.src = imageLink;
+    bookDetailsContainerEl.appendChild(imageEl);
+
+    let authorEl = document.getElementById("p");
+    authorEl.classList.add("col-6");
+    authorEl.textContent = author;
+    bookDetailsContainerEl.appendChild(authorEl);
+
+    searchResultEl.appendChild(resultItemEl);
+}
+
+function displayResults(searchresults) {
+    if (searchresults.length === 0) {
+        let errorMsgEl = document.createElement("p");
+        errorMsgEl.textContent = "No result found";
+        searchResultsEl.appendChild(errorMsgEl);
+    } else {
+        let headingEl = document.createElement("h1");
+        errorMsgEl.textContent = "";
+        searchResultsEl.appendChild(headingEl);
+        for(let result of searchresults) {
+            createAndAppendSearchResult(result);
+        }
+    }
+}
+let changedMaxNoBooks = 10;
+let selectDisplayCountEl = document.getElementById("selectDisplayCount");
+selectDisplayCountEl.addEventListener("change", function(event) {
+    changedMaxNoBooks = (event.target.value);
+});
+
+function searchImage(event) {
+    if (event.key === "Enter") {
+        let searchInput = searchResultEl.value;
+        let url = "" + searchInput + "&maxResults=" + changedMaxNoBooks;
+        let options = {
+            method: "GET"
+        };
+        spinnerEl.classList.remove("d-none");
+        searchResultEl.classList.add("d-none");
+        searchResultEl.textContent = "";
+
+        fetch(url, options)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(jsonData) {
+                spinnerEl.classList.add("d-none");
+                searchResultEl.classList.remove("d-none");
+                let {
+                    search_results
+                } = jsonData;
+                displayResults(search_results);
+            });
+    }
+}
+
+searchInputEl.addEventListener("keyDown", searchImage);
+
+
+
+
+
+
+
+
+
+
+let bgColorInputEl = document.getElementById("bgColorInput");
+let fontColorInputEl = document.getElementById("fontColorInput");
+let fontSizeInputEl = document.getElementById("fontSizeInput");
+let fontWeightInputEl = document.getElementById("fontWeightInput");
+let paddingInputEl = document.getElementById("paddingInput");
+let borderRadiusInputEl = document.getElementById("borderRadiusInput");
+let customButtonEl = document.getElementById("customButton");
+
+function onApplyProperties() {
+    let bgColorValue = bgColorInputEl.value;
+    let fontColorValue = fontColorInput.value;
+    let fontSizeValue = fontSizeInput.value;
+    let fontWeightValue = fontWeightInput.value;
+    let paddingValue = paddingInput.value;
+    let borderRadiusValue = borderRadiusInput.value;
+    
+    customButtonEl.style.background = bgColorValue;
+    customButtonEl.style.color = fontColorValue;
+    customButtonEl.style.fontSize = fontSizeValue;
+    customButtonEl.style.fontWeight = fontWeightValue;
+    customButtonEl.style.padding = paddingValue;
+    customButtonEl.style.borderRadius = borderRadiusValue;
+}
+
+
+
+
+
+
+
+
+
+
+let billAmountInput = document.getElementById("billAmount");
+let percentageTipInput = document.getElementById("pecentageTip");
+let tipAmountInput = document.getElementById("tipAmount");
+let totalInput = document.getElementById("toalAmount");
+let errorMessageElement = document.getElementById("errorMessage");
+let errorMessage = "Please Enter a Valid Input.";
+
+function calculateTip() {
+    let billAmountInputValue = billAmountInput.value;
+    let percentageTipInputValue = percentageTipInput.value;
+
+    if (billAmountInputValue === "") {
+        errorMessageElement.textContent = errorMessage;
+    } else if (percentageTipInputValue === "") {
+        errorMessageElement.textContent = errorMessage;
+    } else {
+        errorMessageElement.textContent = "";
+        let billAmount = parseInt(billAmountInputValue);
+        let percentageTip = parseInt(percentageTipInputValue);
+
+        let calculatedTip = (percentageTip / 100) * billAmount;
+        let calculatedTotal = billAmount + calculatedTip;
+
+        tipAmountInput.value = calculatedTip;
+        totalInput.value = calculatedTotal;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+9705262418
+9912413171
+venky
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/medicalcare-img.png
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/coronavirus-img.png
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/cough-img.png
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/fever-img.png
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/headache-img.png
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/doctor-img.png
+
+
+
+
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/orange-color-bg.png
+
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/nemo-c1-img.png
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/nemo-c2-img.png
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/nemo-c3-img.png
+
+
+
+
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/finding-dory-img.png
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/bugslife-img.png
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/ratatouille-movie-img.png
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/ratatouille-movie-img.png
+
+
+
+
+
+
+
+
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tajmahal-c1-img.png" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tajmahal-c2-img.png" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tajmahal-c3-img.png" class="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+
+
+
+
+
+
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/conference-img.png
+https://youtu.be/vKJ6nXE_6Hc
+
+
+
+
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/coding-question-img.png
+
+
+
+
+
+
+
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/podcasts-bg.png
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/puri-jagannadh-img.png
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tedx-img.png
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/sadhguru-img.png
+https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/on-purpose-img.png
+
+
+
+
+
+<a class="navbar-brand" href="#">
+        <img
+          src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/navbar-logo-img.png"
+          class="navbar-image"
+          alt=""
+        />
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link active" href="#">
+            Home <span class="sr-only">(current)</span>
+          </a>
+          <a class="nav-link" href="#">About Me</a>
+          <a class="nav-link" href="#">Projects</a>
+          <a class="nav-link" href="#">Testimonials</a>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+ https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/vr-logo-img.png
+
+Background Image: https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/vr-banner-bg.png
+
+
+
+
+ <a class="trending-blogs-card-link" href="">
+                                READ MORE
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi  bi-arrow-right-short" fill="#1754a1" xmlns="https://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 1-.708-.708l10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                </svg>
+                            </a>
+
+
+
+
+
+
+
+
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-text" viewBox="0 0 16 16">
+  <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+  <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
+</svg>
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
+  <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
+</svg>
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+</svg>
